@@ -4,6 +4,10 @@ Link to Site:
 
 http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php 
 
+
+
+May 14 2017 5pm
+
 Updates:
 
 Created signIn and signOut tables
@@ -23,3 +27,9 @@ Count Current Visitors function
 Average Time function
 
  
+ 
+May 13 2017 10pm
+
+Updates:
+
+Completed MVC Base Skeleton

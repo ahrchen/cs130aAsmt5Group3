@@ -8,7 +8,7 @@ http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php
 
 <b>May 14 2017 5pm</b>
 
- Updates:
+ <u>Updates:</u>
 
   Created signIn and signOut tables
 
@@ -16,7 +16,7 @@ http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php
 
  
 
- Task:
+ <u>Task:</u>
 
   Connect to Database
 
@@ -30,6 +30,6 @@ http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php
  
 <b>May 13 2017 10pm</b>
 
- Updates:
+ <u>Updates:</u>
 
   Completed MVC Base Skeleton

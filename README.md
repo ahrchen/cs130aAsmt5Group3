@@ -6,7 +6,7 @@ http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php
 
 
 
-May 14 2017 5pm
+<b>May 14 2017 5pm</b>
 
 Updates:
 
@@ -28,7 +28,7 @@ Average Time function
 
  
  
-May 13 2017 10pm
+<b>May 13 2017 10pm</b>
 
 Updates:
 

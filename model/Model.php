@@ -1,33 +1,45 @@
 <?php
-include_once("model/Visitor.php");
 
 class Model {
+	private $db;
+	
+	public function __construct() {
+		//Connect to database
+		function connectDB() {
+		include_once('/students/rchen14/secure/dbVarsAsmt5Grp3.inc');
+        $db = new mysqli('localhost', $dbuser, $dbpass, 'test_cs130a_asmt5_group3');
+        unset($dbhost, $dbuser, $dbpass, $database);
+        return $db;
+        }
+		$this->db = connectDB();
+	}
 
 
-
+    // return the visitors inside building.  
 	public function getVisitorList()
-	// return the requested visitors one.  
-	//we will need to replace this with code from mySQL database.
-
 	{
-		return array(
-			"Visitor1" => new Visitor("Visitor1", "Host1"),
-			"Visitor2" => new Visitor("Visitor2", "Host2"),
-			"Visitor3" => new Visitor("Visitor3", "Host3")
-		);
-	}
 
+		$myQuery = "SELECT visitorName, hostName, signInTime, signOutTime
+				FROM visitorLog
+				WHERE signOutTime IS NULL
+				ORDER BY signInTime DESC;";
+		return $this->convertQueryToArray($myQuery);
+
+	}//close getVisitorList()
+
+   
+    // return the requested visitors one.  
 	public function getPastVisitorList()
-	// return the requested visitors one.  
-	//we will need to replace this with code from mySQL database.
+	
+
 
 	{
-		return array(
-			"Visitor4" => new Visitor("Visitor4", "Host4"),
-			"Visitor5" => new Visitor("Visitor5", "Host5"),
-			"Visitor6" => new Visitor("Visitor6", "Host6")
-		);
-	}
+		$myQuery = "SELECT visitorName, hostName, signInTime, signOutTime
+				FROM visitorLog
+				WHERE signOutTime IS NOT NULL
+				ORDER BY signInTime DESC;";
+		return $this->convertQueryToArray($myQuery);
+	}//close getPastVisitorList()
         
 
 //we need to create code to signIn for appending new visitors
@@ -49,14 +61,31 @@ class Model {
 	}
 
 	
-	public function getVisitor($visitorName)
-	{
-		$visitors = $this->getVisitorList();
-		$pastVisitors = $this->getPastVisitorList();
-		$allVisitors = array_merge($visitors,$pastVisitors);
-		return $allVisitors[$visitorName];
-	}
 //we will need to create code to setVisitor to create visitor objects for appending
+
+	//store the query into array to be displayed in visitorlist view
+	private function convertQueryToArray($myQuery) {
+
+	$result = $this->db->query($myQuery);
+
+    if ($result) {
+      $myVisitors = [];
+      $i = 0;
+
+      while ($visitor = $result->fetch_assoc()) {
+        foreach ($visitor as $field => $value) {
+          $myVisitors[$i][$field] = ($value);
+        }
+        $i++;
+      }
+
+      $result->free();
+      return $myVisitors;
+    }
+    else { 
+      return false;
+    }
+  } // end convertQueryToArray
 }
 
 ?>

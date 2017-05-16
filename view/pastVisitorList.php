@@ -9,11 +9,14 @@
 		</tr>
 	</thead>
 <?php 
-//for each visitor in my array I will create a row, 
+////Take the two dimensional array,
+//[[0] =>[[visitorName=>Raymond],[hostName=>Henry],[signInTime=>now()],[signOutTime]=>later()]]
+//Pull each pastVisitor [0],[1],[2]... as visitor and put into row
   $table = '<tbody>';
     foreach ($pastVisitors as $visitor) {
       $table .= '<tr>';
-	//I will pull data from each field and put it into each table column
+      //Pull from each  visitor [0],[1],[2]... their respective fields
+      //[visitorName=>Raymond],[hostName=>Henry],[signInTime=>now()],[signOutTime]=>later()] and put into column
       foreach ($visitor as $field => $data) {
         $table .= '<td>' . $data . '</td>';
       }

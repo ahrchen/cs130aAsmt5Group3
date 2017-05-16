@@ -8,20 +8,20 @@
 			<th>Sign Out Time</th>
 		</tr>
 	</thead>
-	<tbody>
 <?php 
 
-		foreach ($visitors as $visitorName => $visitor)
-		{
-echo <<<END
-<tr>
-	<td><a href="index.php?visitor=$visitor->visitorName">$visitor->visitorName</a></td>
-	<td>$visitor->hostName</td>
-	<td>$visitor->signInTime</td>
-	<td>$visitor->signOutTime</td>
-</tr>		
-END;
-}
+  $table = '<tbody>';
+//for each current visitor I will create a row
+    foreach ($currentVisitors as $visitor) {
+      $table .= '<tr>';
+	    //for each visitor field I will insert into column
+      foreach ($visitor as $field => $data) {
+        $table .= '<td>' . $data . '</td>';
+      }
+      $table .= '</tr>';
+    }
+
+	echo $table;
 ?>
 </tbody>
 </table>

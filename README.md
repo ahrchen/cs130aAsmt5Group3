@@ -2,7 +2,9 @@
 
 Link to Site:
 
-http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php 
+http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php Old Site Not Connected to DB
+
+https://hills.ccsf.edu/~rchen14/cs130a/group_assignment05_tester/index.php New Site Connected to DB
 
 <b>May 15 2017 10pm</b>
 

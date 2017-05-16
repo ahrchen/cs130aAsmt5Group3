@@ -14,7 +14,7 @@ http://hills.ccsf.edu/~rchen14/cs130a/group_assignment05/index.php
 
  <ul>Task:
 
-   ~~ * Connect to Database~~
+   ~~* Connect to Database~~
 
   * Create signIn() and signOut() functions
 

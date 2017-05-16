@@ -1,6 +1,6 @@
 <br><br>
-<div id=signInsignOut style="width:900px;margin:0 auto;clear:both;">
-<table style="width: 50%; float: left;">
+<div id=signInsignOut style="width:550px;margin:0 auto;clear:both;">
+<table style="width: 100%; float: left;">
 	<caption><h3>Sign In</h3></caption>
 	<thead>
 		<tr>

@@ -11,10 +11,13 @@
 <?php 
 
   $table = '<tbody>';
-//for each current visitor I will create a row
+  ////Take the two dimensional array,
+//[[0] =>[[visitorName=>Raymond],[hostName=>Henry],[signInTime=>now()],[signOutTime]=>later()]]
+//Pull each pastVisitor [0],[1],[2]... as visitor and put into row
     foreach ($currentVisitors as $visitor) {
       $table .= '<tr>';
-	    //for each visitor field I will insert into column
+      //Pull from eachvisitor [0],[1],[2]... their respective fields
+      //[visitorName=>Raymond],[hostName=>Henry],[signInTime=>now()],[signOutTime]=>later()] and put into column
       foreach ($visitor as $field => $data) {
         $table .= '<td>' . $data . '</td>';
       }

@@ -66,8 +66,8 @@ class Model {
 
       $myVisitors = [];
       $i = 0;
-//The following will produce a two dimensional array [[0][visitorName=>Raymond],
-//[0][hostName=>Henry],[0][signInTime=>now()],[0][signOutTime]=>later()]
+//The following will produce a two dimensional array
+//[[0] =>[[visitorName=>Raymond],[hostName=>Henry],[signInTime=>now()],[signOutTime]=>later()]]
       while ($visitor = $result->fetch_assoc()) {
         foreach ($visitor as $field => $value) {
           $myVisitors[$i][$field] = $value;

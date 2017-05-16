@@ -18,7 +18,7 @@ class Controller {
 			include 'view/header.php';
 			include 'view/signIn.php';
 			include 'view/signOut.php';
-			$visitors = $this->model->getVisitorList();
+			$currentVisitors = $this->model->getVisitorList();
 			include 'view/visitorlist.php';
 			$pastVisitors = $this->model->getPastVisitorList();
 			include 'view/pastVisitorList.php';

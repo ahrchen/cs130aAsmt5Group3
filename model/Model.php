@@ -67,24 +67,19 @@ class Model {
 	private function convertQueryToArray($myQuery) {
 
 	$result = $this->db->query($myQuery);
-
-    if ($result) {
+	
       $myVisitors = [];
       $i = 0;
-
+	//The following will produce a two dimensional array [[0][visitorName=>Raymond],[0][hostName=>Henry],[0][signInTime=>now(),[0][signOutTime]=>later()]
       while ($visitor = $result->fetch_assoc()) {
         foreach ($visitor as $field => $value) {
-          $myVisitors[$i][$field] = ($value);
+          $myVisitors[$i][$field] = $value;
         }
         $i++;
       }
 
       $result->free();
       return $myVisitors;
-    }
-    else { 
-      return false;
-    }
   } // end convertQueryToArray
 }
 

@@ -1,0 +1,39 @@
+//code used to create out database
+
+CREATE DATABASE test_cs130a_asmt5_group3
+
+USE test_cs130a_asmt5_group3
+
+CREATE TABLE visitor_log (
+    -> id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -> visitorName VARCHAR(25) NOT NULL,
+    -> hostName VARCHAR(25) NOT NULL,
+    -> signInTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    -> signOutTime TIMESTAMP NULL
+    -> );
+
+//test our visitor log via mysql 
+
+INSERT INTO visitor_log (
+    -> visitorName,
+    -> hostName
+    -> ) VALUES (
+    -> "Raymond",
+    -> "Henry"
+    -> );
+
+ INSERT INTO visitor_log (
+    -> visitorName,
+    -> hostName
+    -> ) VALUES (
+    -> "Raymond2",
+    -> "Henry2"
+    -> );
+   
+//see table results
+
+SELECT * FROM visitor_log;
+
+//For more information check out http://www.wikihow.com/Create-a-Database-in-MySQL
+
+

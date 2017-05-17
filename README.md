@@ -32,8 +32,8 @@ ASSIGNMENT COMPLETE
 </ul>
 
 <ul>Other Task
-* AJAX 
-* Cookies
+*  AJAX ?
+*  Cookies ?
 </ul>
 
 

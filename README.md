@@ -32,9 +32,10 @@ ASSIGNMENT COMPLETE
 </ul>
 
 <ul>Other Task:
- * AJAX ?
- * Cookies ?
-</ul>
+
+  *  AJAX
+
+  * COOKIES
 
 
 <b>May 16 2017 8am</b>

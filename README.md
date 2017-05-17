@@ -31,9 +31,9 @@ ASSIGNMENT COMPLETE
   * ~~Average Time function~~
 </ul>
 
-<ul>Other Task
-*  AJAX ?
-*  Cookies ?
+<ul>Other Task:
+ * AJAX ?
+ * Cookies ?
 </ul>
 
 
